@@ -1,0 +1,878 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #001f3f, #003366);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s infinite alternate;
+    overflow: hidden;
+    z-index: 0;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.projects {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 300px;
+    margin: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.project h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1em;
+}
+
+.background-design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    background-color: #3498db;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: moveCircle 10s infinite alternate;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(20px, 20px);
+    }
+}
+
+.greeting-statement,
+.about-me {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.greeting-statement p,
+.greeting-statement h1,
+.greeting-statement .role,
+.about-me p,
+.about-me h2 {
+    margin: 5px 0;
+}
+
+.greeting-statement p,
+.about-me p {
+    font-size: 1.5em;
+}
+
+.greeting-statement h1,
+.about-me h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.greeting-statement .role {
+    font-size: 1.2em;
+    color: rgb(216, 255, 20);
+}
+
+.profile-image {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    animation: pulse 3s infinite;
+    border-radius: 50%;
+}
+
+
+
+.about-me {
+    width: 60%;
+    margin: auto; /* Center the about-me section horizontally */
+    padding: 20px;
+    text-align: center;
+}
+
+.about-me h2 {
+    color: rgba(42, 255, 42, 0.729);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+    animation: fadeIn 9s ease; /* Adjusted to 3 seconds */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.resume-button {
+    background-color: #4CAF50; /* Green background color */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Add a smooth transition for the color change */
+
+}
+
+.resume-button:hover {
+    background-color: #3fe847; /* Darker green on hover */
+}
+
+/* Add some basic styling for the container */
+.image-container {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    margin: 20px 0 40px; /* Add more space above and below the container */
+}
+
+/* Add some basic styling for the images */
+.interactive-image {
+    position: relative;
+    width: 300px; /* Adjust the size as needed */
+    height: auto;
+    cursor: pointer;
+    margin: -20px 20px 10px; /* Adjust the top margin to move the images up */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.interactive-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+/* Style for the tooltip */
+.tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 100%; /* Ensure the tooltip spans the full width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Style for the college/school name and graduation year */
+.tooltip h3,
+.tooltip p {
+    font-size: 2em;
+    margin: 0 0 5px;
+    color: #a2d1f0;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.tooltip p {
+    font-size: 1.5em;
+    margin: 0; /* Remove margin to prevent unwanted spacing */
+    color: #f5ef3c;
+}
+
+/* Hover effect */
+.interactive-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.interactive-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Style for the creative hover effect */
+.interactive-image:hover {
+    transform: scale(1.1);
+}
+
+.interactive-image:hover img {
+    filter: blur(5px); /* Adjust the blur effect as needed */
+}
+
+.interactive-image:hover .overlay {
+    opacity: 1;
+}
+
+.interactive-image:hover .tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-50%); /* Center both vertically and horizontally */
+}
+
+.interactive-image:hover .tooltip h3,
+.interactive-image:hover .tooltip p {
+    animation: slideIn 0.5s ease-in-out; /* Add slideIn animation */
+}
+
+/* Animation for slideIn effect */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+
+/* Apply green color to My Skills header and position it in the middle */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+#projects {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px; /* Adjust margin to separate projects from certifications */
+}
+
+#projects h2 {
+    margin: 0;
+    padding: 0;
+    color: rgba(42, 255, 42, 0.729);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.project {
+    position: relative;
+    flex: 0 0 calc(30% - 20px);
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 300px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smoother transition */
+}
+
+.project:nth-child(4),
+.project:nth-child(5) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Adjusted shadow on hover */
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smoother transition */
+}
+
+.project:hover .project-image {
+    border: 1px solid #000; /* Add border on hover */
+}
+
+.project-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smoother transition */
+}
+
+.project:hover .project-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.project p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Improved transition */
+    margin-right: 10px;
+}
+
+.project-links a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 768px) {
+    .project {
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    .projects {
+        padding: 10px;
+    }
+
+    .project h3 {
+        font-size: 18px;
+    }
+
+    .project p {
+        font-size: 14px;
+    }
+}
+
+#certifications {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+#certifications h2 {
+    margin: 20px 0;
+    padding: 0;
+    color: rgba(42, 255, 42, 0.729);
+    position: relative;
+    z-index: 1;
+}
+
+.certification {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    overflow: hidden;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.certification:hover {
+    transform: translateY(-5px) scale(1.05); /* Increase the scale effect on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+}
+
+.certification-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smoother transition */
+}
+
+.certification:hover .certification-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certification-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.certification h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.certification-links {
+    margin-top: 15px;
+}
+
+.certification-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Improved transition */
+    margin-right: 10px;
+}
+
+.certification-links a:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1); /* Increase the scale effect on hover for the links */
+}
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 768px) {
+    .certification {
+        display: block;
+        width: 100%;
+    }
+
+    #certifications h2 {
+        margin-top: 40px; /* Adjust margin to center the h2 on smaller screens */
+    }
+}
+
+
+#experience {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+#experience h2 {
+    margin: 20px 0;
+    padding: 0;
+    color: rgba(42, 255, 42, 0.729);
+    position: relative;
+    z-index: 1;
+}
+
+.experience {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.experience:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px; /* Adjust the height as needed */
+    margin-bottom: 10px;
+}
+
+.experience-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.experience-details {
+    position: relative;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.experience:hover .experience-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.experience h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.experience p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 768px) {
+    .experience {
+        display: block;
+        width: 100%;
+        margin-right: 0; /* Remove the right margin for better alignment on smaller screens */
+    }
+
+    #experience h2 {
+        margin-top: 40px; /* Adjust margin to center the h2 on smaller screens */
+    }
+}
+
+#startup {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+}
+
+#startup h2 {
+    margin: 0;
+    padding: 0;
+    color: rgba(42, 255, 42, 0.729);
+}
+
+.picturee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.logo {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: translateY(-5px);
+}
+
+.logo:hover img {
+    border: 1px solid #000;
+}
+
+.startup-details {
+    text-align: left;
+    position: relative; /* Add this to establish a stacking context */
+    z-index: 2; /* Increase z-index to make it visible */
+}
+
+.startup-details h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff;
+    z-index: 2; /* Increase z-index */
+}
+
+.startup-details p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #f1ff31;
+    z-index: 2; /* Increase z-index */
+}
+
+.details-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #3fe847;
+}
+
+
+/* Apply green color to My Skills header and position it in the middle */
+#skills {
+    text-align: center;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+#skills h2 {
+    margin: 20px 0; /* Add margin to the top for better spacing */
+    padding: 10px 0; /* Add padding to improve readability */
+    color: #4caf50; /* Green color */
+    font-size: 2em; /* Increase font size for a bold header */
+}
+
+.skill-categories {
+    text-align: center; /* Center the skill categories */
+}
+
+.skill-category {
+    margin: 0 10px 20px; /* Adjust margin for better spacing between categories */
+    border-radius: 8px; /* Add rounded corners for a modern look */
+    background: linear-gradient(to right, #333, #555); /* Gradient background */
+    padding: 15px; /* Add padding to the skill categories */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    display: inline-block; /* Display skill categories inline */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+}
+
+.skill-category:hover {
+    transform: scale(1.05); /* Increase size on hover for a subtle effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+}
+
+.skill-category h3 {
+    font-size: clamp(1.5em, 2vw, 2em); /* Responsive font size using 'clamp' */
+    margin-bottom: 15px; /* Increase space below category headers */
+    color: #eaff75; /* Light green color for category headers */
+}
+
+.skill-category h3::before {
+    content: '\1F4D6'; /* Unicode character for a document icon */
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Align text to the left within each skill category */
+}
+
+.skill-category li {
+    margin-bottom: 10px;
+    font-size: clamp(1em, 1.5vw, 1.2em);
+    color: #ffffff;
+}
+
+.skill-category li:hover {
+    color: #4caf50; /* Change text color on hover */
+}
+
+.skill-category li::before {
+    content: '\2022'; /* Unicode character for a bullet point */
+    color: #4caf50; /* Match the green color */
+    font-size: 1.2em; /* Adjust size for better alignment */
+    margin-right: 8px; /* Add space between asterisk and skill text */
+}
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 768px) {
+    .skill-category {
+        display: block; /* Change back to block for stacking on smaller screens */
+        margin: 0 0 20px 0;
+    }
+}
+
+.details-button {
+    z-index: 9999; /* You can adjust the value based on your layout */
+    /* Add other styling as needed */
+}
+
+
+#additional-documents {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#additional-documents h2 {
+    margin: 20px 0;
+    padding: 0;
+    color: rgba(42, 255, 42, 0.729);
+    position: relative;
+    z-index: 1;
+}
+
+.pdf-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pdf-image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.pdf-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.pdf-details {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pdf-details h3 {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: #fff; /* Add white color */
+    position: relative;
+    z-index: 1;
+}
+
+.download-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.download-button:hover {
+    background-color: #555;
+    color: #fff;
+    transform: scale(1.1);
+}
