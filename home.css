@@ -147,7 +147,7 @@ p {
 
 .about-me {
     width: 60%;
-    margin: auto; /* Center the about-me section horizontally */
+    margin: auto; 
     padding: 20px;
     text-align: center;
 }
@@ -162,7 +162,7 @@ p {
     color: #ffffff;
     font-size: 16px;
     line-height: 1.6;
-    animation: fadeIn 9s ease; /* Adjusted to 3 seconds */
+    animation: fadeIn 9s ease; 
 }
 
 @keyframes fadeIn {
@@ -174,7 +174,7 @@ p {
     }
 }
 .resume-button {
-    background-color: #4CAF50; /* Green background color */
+    background-color: #4CAF50; 
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -185,28 +185,28 @@ p {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s; /* Add a smooth transition for the color change */
+    transition: background-color 0.3s; 
 
 }
 
 .resume-button:hover {
-    background-color: #3fe847; /* Darker green on hover */
+    background-color: #3fe847; 
 }
 
-/* Add some basic styling for the container */
+
 .image-container {
     display: flex;
-    justify-content: center; /* Center the images horizontally */
-    margin: 20px 0 40px; /* Add more space above and below the container */
+    justify-content: center; 
+    margin: 20px 0 40px; 
 }
 
-/* Add some basic styling for the images */
+
 .interactive-image {
     position: relative;
-    width: 300px; /* Adjust the size as needed */
+    width: 300px; 
     height: auto;
     cursor: pointer;
-    margin: -20px 20px 10px; /* Adjust the top margin to move the images up */
+    margin: -20px 20px 10px; 
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -232,8 +232,6 @@ p {
 }
 
 
-
-/* Style for the tooltip */
 .tooltip {
     position: absolute;
     top: 50%;
@@ -242,11 +240,10 @@ p {
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    width: 100%; /* Ensure the tooltip spans the full width */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
-/* Style for the college/school name and graduation year */
 .tooltip h3,
 .tooltip p {
     font-size: 2em;
@@ -257,11 +254,10 @@ p {
 
 .tooltip p {
     font-size: 1.5em;
-    margin: 0; /* Remove margin to prevent unwanted spacing */
+    margin: 0; 
     color: #f5ef3c;
 }
 
-/* Hover effect */
 .interactive-image {
     position: relative;
     overflow: hidden;
@@ -289,13 +285,12 @@ p {
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Style for the creative hover effect */
 .interactive-image:hover {
     transform: scale(1.1);
 }
 
 .interactive-image:hover img {
-    filter: blur(5px); /* Adjust the blur effect as needed */
+    filter: blur(5px);
 }
 
 .interactive-image:hover .overlay {
@@ -304,15 +299,14 @@ p {
 
 .interactive-image:hover .tooltip {
     opacity: 1;
-    transform: translateY(-50%) translateX(-50%); /* Center both vertically and horizontally */
+    transform: translateY(-50%) translateX(-50%);
 }
 
 .interactive-image:hover .tooltip h3,
 .interactive-image:hover .tooltip p {
-    animation: slideIn 0.5s ease-in-out; /* Add slideIn animation */
+    animation: slideIn 0.5s ease-in-out; 
 }
 
-/* Animation for slideIn effect */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -325,7 +319,6 @@ p {
 }
 
 
-/* Apply green color to My Skills header and position it in the middle */
 *,
 *:before,
 *:after {
@@ -344,7 +337,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
-    margin-bottom: 40px; /* Adjust margin to separate projects from certifications */
+    margin-bottom: 40px; 
 }
 
 #projects h2 {
@@ -367,7 +360,7 @@ body {
     overflow: hidden;
     height: 300px;
     box-sizing: border-box;
-    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smoother transition */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .project:nth-child(4),
@@ -378,7 +371,7 @@ body {
 
 .project:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Adjusted shadow on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); 
 }
 
 .project-image {
@@ -391,11 +384,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease; /* Smoother transition */
+    transition: transform 0.5s ease; 
 }
 
 .project:hover .project-image {
-    border: 1px solid #000; /* Add border on hover */
+    border: 1px solid #000; 
 }
 
 .project-details {
@@ -409,7 +402,7 @@ body {
     box-sizing: border-box;
     opacity: 0;
     transform: translateY(100%);
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smoother transition */
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .project:hover .project-details {
@@ -437,7 +430,7 @@ body {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Improved transition */
+    transition: background-color 0.3s ease, color 0.3s ease; 
     margin-right: 10px;
 }
 
@@ -446,7 +439,7 @@ body {
     color: #000;
 }
 
-/* Adjust the layout for smaller screens */
+
 @media (max-width: 768px) {
     .project {
         flex: 0 0 calc(100% - 20px);
@@ -490,9 +483,9 @@ body {
 }
 
 .certification:hover {
-    transform: translateY(-5px) scale(1.05); /* Increase the scale effect on hover */
+    transform: translateY(-5px) scale(1.05); 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .certification-image {
@@ -504,7 +497,7 @@ body {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    transition: transform 0.3s ease; /* Smoother transition */
+    transition: transform 0.3s ease; 
 }
 
 .certification:hover .certification-details {
@@ -541,17 +534,17 @@ body {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Improved transition */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
     margin-right: 10px;
 }
 
 .certification-links a:hover {
     background-color: #fff;
     color: #000;
-    transform: scale(1.1); /* Increase the scale effect on hover for the links */
+    transform: scale(1.1); 
 }
 
-/* Adjust the layout for smaller screens */
+
 @media (max-width: 768px) {
     .certification {
         display: block;
@@ -559,7 +552,7 @@ body {
     }
 
     #certifications h2 {
-        margin-top: 40px; /* Adjust margin to center the h2 on smaller screens */
+        margin-top: 40px; 
     }
 }
 
@@ -595,7 +588,7 @@ body {
 .experience-image {
     position: relative;
     overflow: hidden;
-    height: 250px; /* Adjust the height as needed */
+    height: 250px; 
     margin-bottom: 10px;
 }
 
@@ -632,16 +625,16 @@ body {
     margin: 10px 0;
 }
 
-/* Adjust the layout for smaller screens */
+
 @media (max-width: 768px) {
     .experience {
         display: block;
         width: 100%;
-        margin-right: 0; /* Remove the right margin for better alignment on smaller screens */
+        margin-right: 0; 
     }
 
     #experience h2 {
-        margin-top: 40px; /* Adjust margin to center the h2 on smaller screens */
+        margin-top: 40px;
     }
 }
 
@@ -691,22 +684,22 @@ body {
 
 .startup-details {
     text-align: left;
-    position: relative; /* Add this to establish a stacking context */
-    z-index: 2; /* Increase z-index to make it visible */
+    position: relative; 
+    z-index: 2;
 }
 
 .startup-details h3 {
     margin: 0;
     font-size: 1.5em;
     color: #fff;
-    z-index: 2; /* Increase z-index */
+    z-index: 2; 
 }
 
 .startup-details p {
     font-size: 1em;
     margin: 10px 0;
     color: #f1ff31;
-    z-index: 2; /* Increase z-index */
+    z-index: 2;
 }
 
 .details-button {
@@ -724,7 +717,7 @@ body {
 }
 
 
-/* Apply green color to My Skills header and position it in the middle */
+
 #skills {
     text-align: center;
     z-index: 1;
@@ -732,39 +725,39 @@ body {
 }
 
 #skills h2 {
-    margin: 20px 0; /* Add margin to the top for better spacing */
-    padding: 10px 0; /* Add padding to improve readability */
-    color: #4caf50; /* Green color */
-    font-size: 2em; /* Increase font size for a bold header */
+    margin: 20px 0; 
+    padding: 10px 0; 
+    color: #4caf50; 
+    font-size: 2em; 
 }
 
 .skill-categories {
-    text-align: center; /* Center the skill categories */
+    text-align: center; 
 }
 
 .skill-category {
-    margin: 0 10px 20px; /* Adjust margin for better spacing between categories */
-    border-radius: 8px; /* Add rounded corners for a modern look */
-    background: linear-gradient(to right, #333, #555); /* Gradient background */
-    padding: 15px; /* Add padding to the skill categories */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-    display: inline-block; /* Display skill categories inline */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+    margin: 0 10px 20px; 
+    border-radius: 8px; 
+    background: linear-gradient(to right, #333, #555); 
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .skill-category:hover {
-    transform: scale(1.05); /* Increase size on hover for a subtle effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .skill-category h3 {
-    font-size: clamp(1.5em, 2vw, 2em); /* Responsive font size using 'clamp' */
-    margin-bottom: 15px; /* Increase space below category headers */
-    color: #eaff75; /* Light green color for category headers */
+    font-size: clamp(1.5em, 2vw, 2em); 
+    margin-bottom: 15px; 
+    color: #eaff75; 
 }
 
 .skill-category h3::before {
-    content: '\1F4D6'; /* Unicode character for a document icon */
+    content: '\1F4D6'; 
     font-size: 1.5em;
     margin-right: 10px;
 }
@@ -772,7 +765,7 @@ body {
 .skill-category ul {
     list-style-type: none;
     padding: 0;
-    text-align: left; /* Align text to the left within each skill category */
+    text-align: left; 
 }
 
 .skill-category li {
@@ -782,27 +775,26 @@ body {
 }
 
 .skill-category li:hover {
-    color: #4caf50; /* Change text color on hover */
+    color: #4caf50; 
 }
 
 .skill-category li::before {
-    content: '\2022'; /* Unicode character for a bullet point */
-    color: #4caf50; /* Match the green color */
-    font-size: 1.2em; /* Adjust size for better alignment */
-    margin-right: 8px; /* Add space between asterisk and skill text */
+    content: '\2022'; 
+    color: #4caf50; 
+    font-size: 1.2em; 
+    margin-right: 8px; 
 }
 
-/* Adjust the layout for smaller screens */
+
 @media (max-width: 768px) {
     .skill-category {
-        display: block; /* Change back to block for stacking on smaller screens */
+        display: block; 
         margin: 0 0 20px 0;
     }
 }
 
 .details-button {
-    z-index: 9999; /* You can adjust the value based on your layout */
-    /* Add other styling as needed */
+    z-index: 9999; 
 }
 
 
@@ -853,7 +845,7 @@ body {
 .pdf-details h3 {
     margin: 10px 0 0;
     font-size: 18px;
-    color: #fff; /* Add white color */
+    color: #fff; 
     position: relative;
     z-index: 1;
 }
